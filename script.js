@@ -21,9 +21,8 @@ numbers.forEach(e => {
  
 result.addEventListener('click', t => {
   const x = eval(input.value);
-  let parts = x.toString().split(".");
-
-  if (!parts[1].length > 2) {
+  let parts = x.toFixed(2).toString().split(".");
+  if (parts[1] == 0) {
     return input.value = x;
   }
   input.value = x.toFixed(2);
